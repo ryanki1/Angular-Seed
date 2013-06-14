@@ -10,14 +10,19 @@
     margin-bottom: 8px;
 }
 
-header .row.visible-tablet, footer .row.visible-tablet 
+.visible-tablet .row 
 {
-    margin-left: 2px;
+    margin-bottom: 2px;
 }
 
 header .row.visible-desktop, footer .row.visible-desktop 
 {
     margin-left: 8px;
+}
+
+header .row.visible-tablet, footer .row.visible-tablet 
+{
+    margin-left: 2px;
 }
 
 header .row 
@@ -31,22 +36,22 @@ header .row  h2
     text-align: center;
 }
 
-.visible-tablet [class*="span"] {
-    margin-left: 3px;
-  }
-
 .visible-desktop [class*="span"] {
     margin-left: 8px;
   }
 
-.row.visible-tablet 
-{
-    margin-bottom: 4px;
-}
+.visible-tablet [class*="span"] {
+    margin-left: 2px;
+  }
 
 .row.visible-desktop
 {
     margin-bottom: 8px;
+}
+
+.row.visible-tablet 
+{
+    margin-bottom: 4px;
 }
 
 .infoBoxBorder
@@ -60,6 +65,11 @@ header .row  h2
     height: 160px; 
 }
 
+.visible-tablet #guidelines
+{
+    height: 158px; 
+}
+
 .visible-phone #guidelines img 
 {
     margin: 15px auto;
@@ -71,11 +81,8 @@ header .row  h2
     height: 160px; 
 }
 
-.visible-tablet #carouselTablet 
-{
-    background-color: bisque;
-    height: 328px;
-    margin: 0px 3px 0px 0px;
+.visible-tablet #countryInformation 
+{ 
 }
 
 .visible-desktop #carousel
@@ -88,6 +95,13 @@ header .row  h2
 .visible-desktop .carousel-inner > .item > a > img 
 {
     margin-left: 0px;
+}
+
+.visible-tablet #carouselTablet 
+{
+    background-color: bisque;
+    height: 328px;
+    margin: 0px 3px 0px 0px;
 }
 
 #caseStudies, #caseStudiesTablet
@@ -118,10 +132,8 @@ header .row  h2
 {
     background-color: darkgreen;
     height: 220px; 
-    margin-top: 0px;
+    margin-top: -2px;
 }
-
-
 
 footer .row
 {
