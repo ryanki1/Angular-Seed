@@ -10,21 +10,6 @@
     margin-bottom: 8px;
 }
 
-.visible-tablet .row 
-{
-    margin-bottom: 2px;
-}
-
-header .row.visible-desktop, footer .row.visible-desktop 
-{
-    margin-left: 8px;
-}
-
-header .row.visible-tablet, footer .row.visible-tablet 
-{
-    margin-left: 2px;
-}
-
 header .row 
 {
     background-color: darkcyan;
@@ -36,103 +21,34 @@ header .row  h2
     text-align: center;
 }
 
-.visible-desktop [class*="span"] {
-    margin-left: 8px;
-  }
-
-.visible-tablet [class*="span"] {
-    margin-left: 2px;
-  }
-
-.row.visible-desktop
-{
-    margin-bottom: 8px;
-}
-
-.row.visible-tablet 
-{
-    margin-bottom: 4px;
-}
-
 .infoBoxBorder
 {
     border: 1px solid #CCC;
 }
 
-#guidelines,  #guidelinesTablet
+#guidelines
 {
     background-color: aqua;
-    height: 160px; 
 }
 
-.visible-tablet #guidelines
+#countryInformation
 {
-    height: 158px; 
+    background-color: chocolate; 
 }
 
-.visible-phone #guidelines img 
-{
-    margin: 15px auto;
-}
-
-#countryInformation, #countryInformationTablet 
-{
-    background-color: chocolate;
-    height: 160px; 
-}
-
-.visible-tablet #countryInformation 
-{ 
-}
-
-.visible-desktop #carousel
-{
-    background-color: bisque;
-    height: 328px;
-}
-
-.visible-desktop .carousel-inner > .item > img,
-.visible-desktop .carousel-inner > .item > a > img 
-{
-    margin-left: 0px;
-}
-
-.visible-tablet #carouselTablet 
-{
-    background-color: bisque;
-    height: 328px;
-    margin: 0px 3px 0px 0px;
-}
-
-#caseStudies, #caseStudiesTablet
+#caseStudies
 {
     background-color: brown;
-    height: 160px; 
 }
 
-#globalSupportProgramme, #globalSupportProgrammeTablet
+#globalSupportProgramme
 {
     background-color: blue;
-    height: 160px; 
 }
 
-.visible-phone #globalSupportProgramme .thumbnail
+#mainFooter ul 
 {
-    margin: 15px auto;
-}
-
-#mainFooter.visible-desktop div
-{
-    background-color: darkgreen;
-    height: 220px; 
-    margin-top: -8px;
-}
-
-#mainFooter.visible-tablet div
-{
-    background-color: darkgreen;
-    height: 220px; 
-    margin-top: -2px;
+    list-style-type: none;
 }
 
 footer .row
@@ -144,6 +60,16 @@ footer .row
 @media (min-width: 1200px) 
 {
 
+    header .row.visible-desktop, footer .row.visible-desktop 
+    {
+        margin-left: 8px;
+    }
+
+    .visible-desktop [class*="span"] 
+    {
+        margin-left: 8px;
+    }
+
     #container 
     {
         margin-left: 40px;
@@ -154,11 +80,198 @@ footer .row
     {
         width: 590px;
     }
+
+    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
+    {
+        height: 165px;
+    } 
+
+    .visible-tablet #guidelines img 
+    {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .visible-tablet #globalSupportProgramme img
+    {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .slider1 
+    {
+        width: 100%;
+        height: 338px;
+        background-image: url(../img/slider1.jpg);
+        background-size: cover;
+    }
+
+    .slider2 
+    {
+        width: 100%;
+        height: 338px;
+        background-image: url(../img/slider2.jpg);
+        background-size: cover;
+    }
+
+    .slider3 
+    {
+        width: 100%;
+        height: 338px;
+        background-image: url(../img/slider3.jpg);
+        background-size: cover;
+    }   
+
+    .visible-desktop #mainFooter > div
+    {
+        background-color: darkgreen;
+        height: 220px; 
+        margin-top: -16px;
+        overflow: auto;
+    }
+
+    .visible-desktop #mainFooter > div li 
+    {
+        margin: 10px 0px 0px 5px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .visible-tablet [class*="span"] 
+    {
+        margin-left: 2px;
+    }
+
+    .visible-tablet .row 
+    {
+        margin-bottom: 2px;
+    }
+
+    .row.visible-tablet 
+    {
+        margin-bottom: 4px;
+    }
+
+    header .row.visible-tablet, footer .row.visible-tablet 
+    {
+        margin-left: 2px;
+    }
+
+    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
+    {
+        height: 150px;
+    } 
+
+    .visible-tablet #guidelines img 
+    {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .visible-tablet #globalSupportProgramme img
+    {
+        display: block;
+        margin: 27px auto;
+        max-width: 90%;
+    }
+
+    .slider1 
+    {
+        width: 100%;
+        height: 303px;
+        background-image: url(../img/slider1.jpg);
+        background-size: cover;
+    }
+
+    .slider2 
+    {
+        width: 100%;
+        height: 303px;
+        background-image: url(../img/slider2.jpg);
+        background-size: cover;
+    }
+
+    .slider3 
+    {
+        width: 100%;
+        height: 303px;
+        background-image: url(../img/slider3.jpg);
+        background-size: cover;
+    } 
+
+    .visible-tablet #mainFooter > div
+    {
+        background-color: darkgreen;
+        height: 220px; 
+        margin-top: -20px;
+        overflow: auto;
+    }
+
+    .visible-tablet #mainFooter > div li 
+    {
+        margin: 5px 5px 0px -20px;
+    }
+
+
 }
 
 @media (max-width: 767px) 
 {
     header .row, footer .row {
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
+    {
+        height: 150px;
+    } 
+
+    .visible-phone #guidelines img 
+    {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .slider1 
+    {
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/slider1.jpg);
+        background-size: cover;
+    }
+
+    .slider2 
+    {
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/slider2.jpg);
+        background-size: cover;
+    }
+
+    .slider3 
+    {
+        width: 100%;
+        height: 220px;
+        background-image: url(../img/slider3.jpg);
+        background-size: cover;
+    }
+
+    .visible-phone #main1 .span1 .row:nth-child(1) 
+    {
+        margin-top: -12px;
+    }
+
+    .visible-phone #globalSupportProgramme img
+    {
+        display: block;
+        margin: 15px auto;
+    }
+
+    footer .visible-phone.row 
+    {
+        margin-top: -8px;
     }
 }
