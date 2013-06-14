@@ -10,17 +10,20 @@
 <body>
   <div id="container" class="span4">
     <header>
-      <div id="banner" class="row">
+      <div id="banner" class="row visible-phone visible-tablet visible-desktop">
         <input type="text" ng-model="name" placeholder="Kieran"/>
         <h2 id="welcome">Welcome {{name}} to a page of flowing content :-)</h2>
       </div>     
     </header>
     <section>
-      <div id="main1" class="row">
+      <div id="main1" class="row visible-phone hidden-tablet visible-desktop">
         <div class="span1">
           <div class="row">
-            <div id="guidelines">
-
+            <div id="guidelines" class="row infoBoxBorder">
+              <div hint="NAP Interactive Guidelines">
+                  <a href="#"><img class="thumbnail" src="img/nap-guidelines.png"/></a>
+                  <!--<div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</div>-->
+              </div>
             </div>
           </div>
           <div class="row">
@@ -29,12 +32,37 @@
             </div>
           </div>
         </div>
-        <div class="span2">
-          <div class="row">
-            <div id="carousel">
-
+        <div id="turntable" class="carousel slide span2">
+          <ol class="carousel-indicators">
+                <li data-target="#turntable" data-slide-to="0" class="active"></li>
+                <li data-target="#turntable" data-slide-to="1"></li>
+                <li data-target="#turntable" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img src="img/slider1.jpg" />
+                    <div class="carousel-caption">
+                      <h4>The NAP process</h4>
+                      <p>The NAP is a process to facilitate effective adaptation in countries through reducing vulnerability to climate change, and facilitating integration of adaptation into development.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider2.jpg" />
+                    <div class="carousel-caption">
+                      <h4>The technical guidelines for the NAP process</h4>
+                      <p>The technical guidelines for the NAP process are designed to support countries in their planning and implementation of adaptation at the national level.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/slider3.jpg" />
+                    <div class="carousel-caption">
+                      <h4>The NAP Central</h4>
+                      <p>The NAP Central is the main information platform on supporting the NAP process.</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <a class="carousel-control left" href="#turntable" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#turntable" data-slide="next">&rsaquo;</a>
         </div>
         <div class="span1">
           <div class="row">
@@ -43,14 +71,42 @@
               </div>
           </div>
           <div class="row">
-              <div id="globalSupportProgramme">
-
+              <div id="globalSupportProgramme" class="row infoBoxBorder">
+                <div hint="Global Support Programme">
+                    <a href="#"><img class="thumbnail" src="img/global-support.png"/></a>
+                </div>
               </div>
           </div>
         </div>
 
       </div>
-      <div id="mainFooter" class="row">
+      <div id="main1Tablet" class="row hidden-phone visible-tablet hidden-desktop">
+        <div class="span1">
+          <div id="guidelinesTablet">
+          </div>
+        </div>
+        <div class="span1">
+          <div id="countryInformationTablet">
+
+          </div>
+        </div>
+        <div class="span1">
+          <div id="caseStudiesTablet">
+          </div>
+        </div>
+        <div class="span1">
+          <div id="globalSupportProgrammeTablet">
+          </div>
+        </div>
+      </div>
+      <div id="main2Tablet" class="row hidden-phone visible-tablet hidden-desktop">
+        <div class="span4">
+          <div id="carouselTablet">
+
+          </div>
+        </div>
+      </div>
+      <div id="mainFooter" class="row visible-desktop visible-tablet">
         <div id="hazards" class="span1">
 
         </div>
@@ -60,7 +116,7 @@
       </div>
     </section>
     <footer>
-      <div class="row">
+      <div class="row visible-desktop visible-tablet">
         <div id="tail"></div>
       </div>
     </footer>

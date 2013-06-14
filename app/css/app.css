@@ -7,9 +7,15 @@
 .row 
 {
     margin-left: 0px;
+    margin-bottom: 8px;
 }
 
-header .row, footer .row 
+header .row.visible-tablet, footer .row.visible-tablet 
+{
+    margin-left: 2px;
+}
+
+header .row.visible-desktop, footer .row.visible-desktop 
 {
     margin-left: 8px;
 }
@@ -25,55 +31,103 @@ header .row  h2
     text-align: center;
 }
 
- [class*="span"] {
+.visible-tablet [class*="span"] {
+    margin-left: 3px;
+  }
+
+.visible-desktop [class*="span"] {
     margin-left: 8px;
   }
 
-.row 
+.row.visible-tablet 
+{
+    margin-bottom: 4px;
+}
+
+.row.visible-desktop
 {
     margin-bottom: 8px;
 }
 
-#guidelines 
+.infoBoxBorder
+{
+    border: 1px solid #CCC;
+}
+
+#guidelines,  #guidelinesTablet
 {
     background-color: aqua;
     height: 160px; 
+    position: relative;
 }
 
-#countryInformation 
+.visible-phone #guidelines img 
+{
+    position: relative;
+    left: 160px;
+    top: 15px;
+}
+
+#countryInformation, #countryInformationTablet 
 {
     background-color: chocolate;
     height: 160px; 
 }
 
-#carousel 
+.visible-tablet #carouselTablet 
 {
     background-color: bisque;
-    height: 328px; 
+    height: 328px;
+    margin: 0px 3px 0px 0px;
 }
 
-#caseStudies 
+.visible-desktop #carousel
+{
+    background-color: bisque;
+    height: 328px;
+}
+
+.visible-desktop .carousel-inner > .item > img,
+.visible-desktop .carousel-inner > .item > a > img 
+{
+    margin-left: 0px;
+}
+
+#caseStudies, #caseStudiesTablet
 {
     background-color: brown;
     height: 160px; 
 }
 
-#globalSupportProgramme 
+#globalSupportProgramme, #globalSupportProgrammeTablet
 {
     background-color: blue;
     height: 160px; 
+    position: relative;
 }
 
-#mainFooter.row 
+.visible-phone #globalSupportProgramme .thumbnail
 {
-    margin-top: -8px;
+    position: relative;
+    left: 100px;
+    top: 12px;
 }
 
-#mainFooter div
+#mainFooter.visible-desktop div
 {
     background-color: darkgreen;
     height: 220px; 
+    margin-top: -8px;
 }
+
+#mainFooter.visible-tablet div
+{
+    background-color: darkgreen;
+    height: 220px; 
+    margin-top: 0px;
+}
+
+
 
 footer .row
 {
