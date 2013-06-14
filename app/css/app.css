@@ -58,14 +58,11 @@ header .row  h2
 {
     background-color: aqua;
     height: 160px; 
-    position: relative;
 }
 
 .visible-phone #guidelines img 
 {
-    position: relative;
-    left: 160px;
-    top: 15px;
+    margin: 15px auto;
 }
 
 #countryInformation, #countryInformationTablet 
@@ -103,14 +100,11 @@ header .row  h2
 {
     background-color: blue;
     height: 160px; 
-    position: relative;
 }
 
 .visible-phone #globalSupportProgramme .thumbnail
 {
-    position: relative;
-    left: 100px;
-    top: 12px;
+    margin: 15px auto;
 }
 
 #mainFooter.visible-desktop div
