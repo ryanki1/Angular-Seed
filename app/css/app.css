@@ -1,277 +1,138 @@
 /* app css stylesheet */
-#container 
-{
-    margin: 0px auto;
-}
 
-.row 
+.row
 {
     margin-left: 0px;
-    margin-bottom: 8px;
 }
 
-header .row 
+#index 
 {
-    background-color: darkcyan;
-    height: 110px; 
-}
-
-header .row  h2 
-{
+    background-color: orange;
+    width: 30px;
+    height: 20px;
+    top: 0px;
+    left: 50px;
     text-align: center;
+    z-index: 9999;
 }
 
-.infoBoxBorder
+#index .accordion-heading
 {
-    border: 1px solid #CCC;
+    background-color: inherit;
 }
 
-#guidelines
+#index .accordion-heading .accordion-toggle
 {
+    padding: 2px 0px;
+}
+#index .accordion-body
+{
+    background-color: inherit;
+    margin-left: -40px;
+}
+
+#index .accordion-body.span1
+{
+    min-height: 0px;
+}
+
+#content 
+{
+    padding-top: 30px;
     background-color: aqua;
+    height: auto;
+    position: relative;
 }
 
-#countryInformation
+#contentNavigationMenu 
 {
-    background-color: chocolate; 
+    position: absolute;
+    top: 0px;
+    z-index: 1000;
 }
 
-#caseStudies
+#elementList, #stepList 
 {
-    background-color: brown;
+    left: -60px;
+    text-align:left;
+    list-style-type: none;
 }
 
-#globalSupportProgramme
+/*
+    Content: start
+*/
+
+.close 
 {
-    background-color: blue;
+    color: white;
+    opacity: 0.6;
 }
 
-#mainFooter ul 
+.close:hover, .close:focus 
+{
+    color: white;
+    opacity: 1.0;
+}
+
+.tGuide_sandyBox 
+{
+    background-color: #5B98CE;
+    color: white;
+}
+
+.tGuide_sandyBox_inner
+{
+    padding: 8px;
+}
+
+.tGuide_blueBox
+{
+    background-color: #EEF1FA;
+}
+
+ul.selectedReferences
 {
     list-style-type: none;
 }
 
-footer .row
+ul.selectedReferences li
 {
-    background-color: firebrick;
-    height: 40px; 
+    padding: 8px 0px;
 }
+
+.tGuide_blueBox_inner
+{
+    padding: 8px;
+    color: Black;
+}
+
+.gallery-item 
+{
+    margin-top: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+/*
+    Content: end
+*/
 
 @media (min-width: 1200px) 
 {
 
-    header .row.visible-desktop, footer .row.visible-desktop 
-    {
-        margin-left: 8px;
-    }
+}
 
-    .visible-desktop [class*="span"] 
-    {
-        margin-left: 8px;
-    }
-
-    #container 
-    {
-        margin-left: 40px;
-        width: 1196px;
-    }
-
-    .span2 
-    {
-        width: 590px;
-    }
-
-    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
-    {
-        height: 165px;
-    } 
-
-    .visible-tablet #guidelines img 
-    {
-        display: block;
-        margin: 20px auto;
-    }
-
-    .visible-tablet #globalSupportProgramme img
-    {
-        display: block;
-        margin: 20px auto;
-    }
-
-    .slider1 
-    {
-        width: 100%;
-        height: 338px;
-        background-image: url(../img/slider1.jpg);
-        background-size: cover;
-    }
-
-    .slider2 
-    {
-        width: 100%;
-        height: 338px;
-        background-image: url(../img/slider2.jpg);
-        background-size: cover;
-    }
-
-    .slider3 
-    {
-        width: 100%;
-        height: 338px;
-        background-image: url(../img/slider3.jpg);
-        background-size: cover;
-    }   
-
-    .visible-desktop #mainFooter > div
-    {
-        background-color: darkgreen;
-        height: 220px; 
-        margin-top: -16px;
-        overflow: auto;
-    }
-
-    .visible-desktop #mainFooter > div li 
-    {
-        margin: 10px 0px 0px 5px;
-    }
+@media (min-width: 980px) 
+{
 
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-
-    .visible-tablet [class*="span"] 
-    {
-        margin-left: 2px;
-    }
-
-    .visible-tablet .row 
-    {
-        margin-bottom: 2px;
-    }
-
-    .row.visible-tablet 
-    {
-        margin-bottom: 4px;
-    }
-
-    header .row.visible-tablet, footer .row.visible-tablet 
-    {
-        margin-left: 2px;
-    }
-
-    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
-    {
-        height: 150px;
-    } 
-
-    .visible-tablet #guidelines img 
-    {
-        display: block;
-        margin: 15px auto;
-    }
-
-    .visible-tablet #globalSupportProgramme img
-    {
-        display: block;
-        margin: 27px auto;
-        max-width: 90%;
-    }
-
-    .slider1 
-    {
-        width: 100%;
-        height: 303px;
-        background-image: url(../img/slider1.jpg);
-        background-size: cover;
-    }
-
-    .slider2 
-    {
-        width: 100%;
-        height: 303px;
-        background-image: url(../img/slider2.jpg);
-        background-size: cover;
-    }
-
-    .slider3 
-    {
-        width: 100%;
-        height: 303px;
-        background-image: url(../img/slider3.jpg);
-        background-size: cover;
-    } 
-
-    .visible-tablet #mainFooter > div
-    {
-        background-color: darkgreen;
-        height: 220px; 
-        margin-top: -20px;
-        overflow: auto;
-    }
-
-    .visible-tablet #mainFooter > div li 
-    {
-        margin: 5px 5px 0px -20px;
-    }
-
+@media (min-width: 768px) and (max-width: 979px) 
+{
 
 }
 
 @media (max-width: 767px) 
 {
-    header .row, footer .row {
-        width: 100%;
-        margin-bottom: 20px;
-    }
 
-    #guidelines, #countryInformation, #caseStudies, #globalSupportProgramme 
-    {
-        height: 150px;
-    } 
-
-    .visible-phone #guidelines img 
-    {
-        display: block;
-        margin: 15px auto;
-    }
-
-    .slider1 
-    {
-        width: 100%;
-        height: 200px;
-        background-image: url(../img/slider1.jpg);
-        background-size: cover;
-    }
-
-    .slider2 
-    {
-        width: 100%;
-        height: 200px;
-        background-image: url(../img/slider2.jpg);
-        background-size: cover;
-    }
-
-    .slider3 
-    {
-        width: 100%;
-        height: 220px;
-        background-image: url(../img/slider3.jpg);
-        background-size: cover;
-    }
-
-    .visible-phone #main1 .span1 .row:nth-child(1) 
-    {
-        margin-top: -12px;
-    }
-
-    .visible-phone #globalSupportProgramme img
-    {
-        display: block;
-        margin: 15px auto;
-    }
-
-    footer .visible-phone.row 
-    {
-        margin-top: -8px;
-    }
 }

@@ -3,9 +3,10 @@
 /* Directives */
 
 
-angular.module('myApp.directives', []).
-  directive('appVersion', ['version', function(version) {
-    return function(scope, elm, attrs) {
-      elm.text(version);
-    };
-  }]);
+angular.module('magazineApp.directives', ["magazineApp", "galleryViewer", "galleryItem", "monitorEvents", "pageNavigtor"]);//.
+  //directive('appVersion', ['version', function (version) {
+  //  debugger;
+  //  return function(scope, elm, attrs) {
+  //    elm.text(version);
+  //  };
+  //}]);
