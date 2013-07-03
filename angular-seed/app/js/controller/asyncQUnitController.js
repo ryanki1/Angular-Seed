@@ -1,7 +1,7 @@
 ﻿(function (ng, app) {
   app.controller(
     "asyncQUnitController",
-    function ($scope) {
+    function ($scope, $window) {
       var self = this;
       self.testPresenceOf = function(item) {
         return item.length;
@@ -22,8 +22,8 @@
       $scope.navigatorScrollDownTest = function (ele) {
         debugger;
         var scrollDownEle = angular.element(ele).find('#contentNavigationMenu a:last');
-        angular.element(scrollDownEle).click();
-        ok(angular.element('#content').scrollY > 0, "Content has been scrolled");
+        $scope.scrollDown();
+        ok($window.offsetTop > 0, "Content has been scrolled");
       }
     });
 }(angular, magazineApp));

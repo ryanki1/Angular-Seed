@@ -7,10 +7,6 @@
         ]
     }
 
-    //, "B.3", "B.4", "B.5"] },
-    //                { "element": "C", "steps": ["C.1", "C.2", "C.3", "C.4"] },
-    //                { "element": "D", "steps": ["D.1", "D.2", "D.3", "D.4"] }
-
     $scope.collapseMenu = function () {
       debugger;
       var classes = angular.element("#elementListCollapse").attr("ng-class");

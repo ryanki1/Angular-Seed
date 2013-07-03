@@ -5,6 +5,45 @@
     function (magazineContent, $compile, $window) {
       function Controller($scope, $element, $attrs) {
 
+        var isScrollingUp = function (deltaPxShift) {
+          return deltaPxShift < 0;
+        }
+
+        var tryCancelScrollInterval = function (deltaPxShift, nextDeltaStopPx, endPx, intervalId) {
+          if (isScrollingUp(deltaPxShift)) {
+            if (nextDeltaStopPx < endPx) {
+              $window.clearInterval(intervalId);
+            }
+          }
+          else {
+            if (nextDeltaStopPx > endPx) {
+              $window.clearInterval(intervalId);
+            }
+          }
+        }
+
+        var scrollWindowByDelta = function (startPxDelta, endPxDelta) {
+          debugger;
+          $window.scrollTo(startPxDelta, endPxDelta);
+        }
+
+        var scrollWindowBy = function (heightPx, durationMiliSec, deltaPxShift) {
+          debugger;
+          var startPx = $window.scrollY;
+          var endPx = $window.scrollY + heightPx;
+          var deltaIntervalMiliSec = Math.abs(durationMiliSec / heightPx * deltaPxShift);
+          var nextStartPx = startPx;
+          var nextStopPx = startPx + deltaPxShift;
+          var intervalId;
+          intervalId = $window.setInterval(function () {
+            scrollWindowByDelta(nextStartPx, nextStopPx);
+            nextStartPx = nextStopPx;
+            nextStopPx = nextStopPx + deltaPxShift;
+            tryCancelScrollInterval(deltaPxShift, nextStopPx, endPx, intervalId)
+          },
+          deltaIntervalMiliSec);
+        }
+
         $scope.scrollLeft = function () {
           debugger;
           var bookmark = parseInt($attrs.bookmark);
@@ -22,15 +61,17 @@
 
         $scope.scrollUp = function () {
           event.preventDefault();
-          $window.scrollTo(0, -$window.innerHeight);
+          var durationInMiliSec = 500;
+          var pixelJump = -10;
+          scrollWindowBy(-$window.innerHeight, durationInMiliSec, pixelJump);
         }
 
         $scope.scrollDown = function () {
           debugger;
           event.preventDefault();
-          $window.scrollTo(0, $window.innerHeight);
-          //$window.scrollTo({ top: "100%", left: "0%" }, 3000);
-          //angular.element("#content").stop().scrollTo({ top: "100%", left: "0%" }, 1000);
+          var durationInMiliSec = 500;
+          var pixelJump = 10;
+          scrollWindowBy($window.innerHeight, durationInMiliSec, pixelJump);
         }
 
         $scope.$on("setBookmark", function (event, bookmarkId) {
@@ -61,8 +102,6 @@
 
         $attrs.$observe("bookmark", function (index) {
           debugger;
-          // Update content
-          var contentPanelForUpdate;
           var urlContent = angular.element($attrs.indexid + " li:eq(" + index + ") a").attr("page");
           magazineContent.fetchContentFrom(urlContent, andHangOn);
         });
